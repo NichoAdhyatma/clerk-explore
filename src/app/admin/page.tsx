@@ -1,15 +1,10 @@
-import { SignOutButton } from "@clerk/nextjs";
-import React from "react";
+import { UserButton } from "@clerk/nextjs";
 
 export default function page() {
   return (
-    <div>
-      Admin Page{" "}
-      <SignOutButton redirectUrl="/boarding">
-        <button className="bg-red-500 text-white px-4 py-2 rounded-md hover:cursor-pointer">
-          Sign Out
-        </button>
-      </SignOutButton>
+    <div className="flex flex-col justify-center items-center h-screen gap-4">
+      <UserButton showName />
+      <p>Admin Page</p>
     </div>
   );
 }
